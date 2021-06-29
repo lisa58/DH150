@@ -5,13 +5,10 @@
 <title>
     Web-accessibility Project
 </title>
-<head>
-    <h1>Unusual Museums and their Accessibility</h1>
-    <h2>DH150 Summer 2021 <br>
-    Assignment01<br></h2>
-    <h3>By: Labiba Alam<br></h3>
-    <hr>
-</head>
+
+<header id ="top">
+    <img src="https://source.unsplash.com/1600x900/?banana,fruit">
+</header>
 <style>
     img {
         width: 1000px;
@@ -19,89 +16,136 @@
 </style>
 
 <body>
+    <nav>
+        <a href="#research">Skip to Content</a>
+        <a href="#Banana">Mueseum 1</a>
+        <a href="#Brokenship">Mueseum 2</a>
+        <a href="#Cryptozoology">Mueseum 3</a>
+        <a href="#Death">Mueseum 4</a>
+        <a href="#Funeral">Mueseum 5</a>
+    </nav>
+    <main>
+        <h1>Unusual Museums and their Accessibility</h1>
+        <h2>DH150 Summer 2021 <br>
+            Assignment01<br></h2>
+        <h3>By: Labiba Alam<br></h3>
+        <hr>
+        <article id="research">
+            I chose five museums that I thought were unusual to test and improve their web-accessibility and search
+            engine
+            optimization for this project. From researching these sites, I've learned
+            that screen readers often get overlooked when it comes to web design accessibility. I've also noticed that
+            sites that are close to a full SEO score often don't included a meta description which would bring their
+            site's
+            score to
+            100%.<br>
+            <hr>
+        </article>
 
-    I chose five museums that I thought were unusual to test and improve their web-accessibility and search engine
-    optimization for this project. From researching these sites, I've learned
-    that screen readers often get overlooked when it comes to web design accessibility. I've also noticed that
-    sites that are close to a full SEO score often don't included a meta description which would bring their site's
-    score to
-    100%.<br>
-    <hr>
-    I used Chrome Development tool lighthouse to diagnose the accessibility and SEO scores of the following sites: <br>
-    <hr>
-    1) International Banana Museum, <a
-        href="http://www.internationalbananamuseum.com/"  target="_blank">http://www.internationalbananamuseum.com</a>, Accessibility score
-    (93), SEO score
-    (80) <br><br>
-    <img src='Screenshots/Banana.jpg' alt="International Banana Museum accessibility and SEO scores"><br><br>
-    Ways to improve their scores: <br>
-    <ul>
-        <li>They can add a
-            < meta name="viewport"> tag to optimize their website for mobile screens
-        </li>
-        <li>They could add a meta description which might be included in search results to concisely summarize page
-            content.
-        </li>
-    </ul>
-    <hr>
+        <article>
+            I used Chrome Development tool lighthouse to diagnose the accessibility and SEO scores of the following
+            sites: <br>
+            <hr>
+        </article>
+        <section id="more research">
+            <article id="Banana">
+                1) International Banana Museum, <a href="http://www.internationalbananamuseum.com/"
+                    target="_blank">http://www.internationalbananamuseum.com</a>, Accessibility score
+                (93), SEO score
+                (80) <br><br>
+                <img src='Screenshots/Banana.jpg'
+                    alt="International Banana Museum accessibility and SEO scores"><br><br>
+                Ways to improve their scores: <br>
+                <ul>
+                    <li>They can add a
+                        < meta name="viewport"> tag to optimize their website for mobile screens
+                    </li>
+                    <li>They could add a meta description which might be included in search results to concisely
+                        summarize
+                        page
+                        content.
+                    </li>
+                </ul>
+                <hr>
+            </article>
+            <article id="Brokenship">
+                2) Museum of Broken Relationships, <a href="https://brokenships.com/"
+                    target="_blank">https://brokenships.com</a>, Accessibility score
+                (67), SEO
+                score (82) <br><br>
+                <img src='Screenshots/Brokenship.jpg'
+                    alt="Museum of Broken Relationship saccessibility and SEO scores"><br><br>
 
-    2) Museum of Broken Relationships, <a href="https://brokenships.com/"  target="_blank">https://brokenships.com</a>, Accessibility score
-    (67), SEO
-    score (82) <br><br>
-    <img src='Screenshots/Brokenship.jpg' alt="Museum of Broken Relationship saccessibility and SEO scores"><br><br>
+                Ways to improve their scores: <br>
+                <ul>
+                    <li>They can increase the contrast ratio between the background and foreground colors.</li>
+                    <li>Their image elements could have alternate text for screen readers.</li>
+                </ul>
+                <hr>
+            </article>
+            <article id="Cryptozoology">
+                3) International Crytozoology Museum, <a href="https://cryptozoologymuseum.com/"
+                    target="_blank">https://cryptozoologymuseum.com</a>,
+                Accessibility score (85), SEO score (92) <br><br>
+                <img src='Screenshots/Cryptozoology.jpg'
+                    alt="International Crytozoology Museum accessibility and SEO scores"><br><br>
 
-    Ways to improve their scores: <br>
-    <ul>
-        <li>They can increase the contrast ratio between the background and foreground colors.</li>
-        <li>Their image elements could have alternate text for screen readers.</li>
-    </ul>
-    <hr>
+                Ways to improve their scores: <br>
+                <ul>
+                    <li>They can organize their heading elements in a sequentially-descending order to make it easier
+                        for
+                        screen
+                        readers.</li>
+                    <li>They can add a [lang] attribute so screen readers understand whether or not the page is in its
+                        default
+                        language.
+                    </li>
+                </ul>
+                <hr>
+            </article>
+            <article id="Death">
+                4) Museum of Death, <a href="http://www.museumofdeath.net/"
+                    target="_blank">http://www.museumofdeath.net</a>, Accessibility score (67),
+                SEO
+                score
+                (92) <br><br>
+                <img src='Screenshots/Death.jpg' alt="Museum of Death accessibility and SEO scores"><br><br>
 
+                Ways to improve their scores: <br>
+                <ul>
+                    <li>They can add labels to their form elements to ensure that the form controls are announced
+                        properly
+                        by screen
+                        readers.</li>
+                    <li>They can enable zooming for people with visual impairments.</li>
+                </ul>
+                <hr>
+            </article>
+            <article id ="Funeral">
+                5) National Funeral Museum, <a href="https://www.nmfh.org/" target="_blank">https://www.nmfh.org</a>,
+                Accessibility score (74), SEO
+                score
+                (73)
+                <br><br>
+                <img src='Screenshots/Funeral.jpg' alt="National Funeral Museum accessibility and SEO scores"><br><br>
 
-    3) International Crytozoology Museum, <a href="https://cryptozoologymuseum.com/"  target="_blank">https://cryptozoologymuseum.com</a>,
-    Accessibility score (85), SEO score (92) <br><br>
-    <img src='Screenshots/Cryptozoology.jpg' alt="International Crytozoology Museum accessibility and SEO scores"><br><br>
-
-    Ways to improve their scores: <br>
-    <ul>
-        <li>They can organize their heading elements in a sequentially-descending order to make it easier for screen
-            readers.</li>
-        <li>They can add a [lang] attribute so screen readers understand whether or not the page is in its default
-            language.
-        </li>
-    </ul>
-    <hr>
-
-
-    4) Museum of Death, <a href="http://www.museumofdeath.net/"  target="_blank">http://www.museumofdeath.net</a>, Accessibility score (67),
-    SEO
-    score
-    (92) <br><br>
-    <img src='Screenshots/Death.jpg' alt="Museum of Death accessibility and SEO scores"><br><br>
-
-    Ways to improve their scores: <br>
-    <ul>
-        <li>They can add labels to their form elements to ensure that the form controls are announced properly by screen
-            readers.</li>
-        <li>They can enable zooming for people with visual impairments.</li>
-    </ul>
-    <hr>
-
-    5) National Funeral Museum, <a href="https://www.nmfh.org/"  target="_blank">https://www.nmfh.org</a>, Accessibility score (74), SEO
-    score
-    (73)
-    <br><br>
-    <img src='Screenshots/Funeral.jpg' alt="National Funeral Museum accessibility and SEO scores"><br><br>
-
-    Ways to improve their scores: <br>
-    <ul>
-        <li>They can add descriptive link text which would help search engines understand their content.</li>
-        <li>They can add crawlable links to ensure that the `href` attribute of anchor elements links to an appropriate
-            destination, so more pages of the site can be discovered.</li>
-    </ul>
-    <hr>
-
-    <a href="https://github.com/lisa58/DH150/tree/main/Week1/Screenshots" target="_blank">Screenshots</a>
+                Ways to improve their scores: <br>
+                <ul>
+                    <li>They can add descriptive link text which would help search engines understand their content.
+                    </li>
+                    <li>They can add crawlable links to ensure that the `href` attribute of anchor elements links to an
+                        appropriate
+                        destination, so more pages of the site can be discovered.</li>
+                </ul>
+                <hr>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        <a href="#top">Back to Top</a>
+    </footer>
+    <script></script>
 </body>
 
 </html>
