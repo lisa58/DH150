@@ -320,7 +320,7 @@
             top: 4px;
             right: 4px;
             text-decoration: none;
-            color: #4c4c4c;
+            color: #ffffff;
             font-weight: 700
         }
 
@@ -5347,7 +5347,9 @@
                         </div><!-- /.pull-left -->
                             <p class="designed-by">Site Designed by <a href="http://keystoneresources.com"
                                     target="_blank">Keystone Resources</a><br></p>
-                            <p class id=documentation>This website is a markup of the original <a
+                            <p class id=documentation style =" font-size: medium;">
+                        
+                                This website is a markup of the original <a
                                     href="https://www.nmfh.org/" target="_blank">National Museum of Funeral History</a>. The work is
                                 only for the assignment02,
                                 DH150: Web-coding for UX by Labiba Alam. Here is the accessibility/seo audit result with the
@@ -5358,13 +5360,13 @@
                                 After running lighthouse for the National Museum of Funeral History, 
                                 I noticed a score of 74 for accessibility. After delving deeper 
                                 into what was causing this issue,
-                                I noticed the following issues affected the overall score:
-                                <ul>
-                                    <li>low color contrast</li>
-                                    <li>nonsequential heading elements</li>
-                                    <li>no [lang] attribute</li>
-                                    <li>images without [alt] attributes</li>
-                                </ul>
+                                I noticed the following issues affected the overall score: <br> <br>
+                                    
+                                    - low color contrast <br>
+                                    - nonsequential heading elements <br>
+                                    - no [lang] attribute <br>
+                                    - images without [alt] attributes <br>
+                                    
                                 <br>
                                 After copying and pasting the html code into Atom.io, I went on to correct
                                 these issues, however only succeeded in correcting the nonsequential heading elements and the 
@@ -5374,8 +5376,9 @@
                                 attributes for the two decorative images that were affecting the score: it wouldn't show up. For this
                                 project, I deleted the code for the two decorative images, but the images still show up on the site.
                                 Regardless, I managed to increase the orginal accessibility score of 74 to 82 and the original
-                                SEO score of 73 to 78, but just altering the heading element for h4 to h1 and adding a [lang] attribute.
-                                The SEO score went up to 80 once I added more descriptive text to some of the Museum's Read More/Learn More links.
+                                SEO score of 73 to 78, but just altering the heading element for h4 to h2 and adding a [lang] attribute.
+                                The SEO score went up to 80 once I added more descriptive text to some of the Museum's Read More/Learn More links. I also altered the
+                                font size for this paragraph element so it would be more legible.
                             </p>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
