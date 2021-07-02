@@ -4943,7 +4943,7 @@
                                         museum and social distancing procedures are in place.</p>
 
                                     <a href="https://www.nmfh.org/visit-the-museum/" class="btn btn-green"
-                                        title="Important Update" target="_blank">Learn More</a>
+                                        title="Important Update" target="_blank">Click Here to Learn More</a>
 
                                 </span><!-- /.text-wrapper -->
                             </div>
@@ -4958,8 +4958,8 @@
                                     <p></p>
 
                                     <a href="https://www.nmfh.org/exhibits/permanent-exhibits/bush-memorial-exhibit"
-                                        class="btn btn-green" title="George H.W. Bush Memorial Exhibit Now Open">More
-                                        info</a>
+                                        class="btn btn-green" title="George H.W. Bush Memorial Exhibit Now Open">Click Here for More
+                                        Info</a>
 
                                 </span><!-- /.text-wrapper -->
                             </div>
@@ -4977,7 +4977,7 @@
 
                                     <a href="https://www.nmfh.org/donate/charity-golf-classic" class="btn btn-green"
                                         title="The 27th Annual Charity Golf Classic<br>Save the Date"
-                                        target="_blank">Read
+                                        target="_blank">Click Here to Read
                                         more</a>
 
                                 </span><!-- /.text-wrapper -->
@@ -5348,18 +5348,35 @@
                             <p class="designed-by">Site Designed by <a href="http://keystoneresources.com"
                                     target="_blank">Keystone Resources</a><br></p>
                             <p class id=documentation>This website is a markup of the original <a
-                                    href="https://www.nmfh.org/" target="_blank">National Funeral Museum</a>. The work is
+                                    href="https://www.nmfh.org/" target="_blank">National Museum of Funeral History</a>. The work is
                                 only for the assignment02,
                                 DH150: Web-coding for UX by Labiba Alam. Here is the accessibility/seo audit result with the
                                 original score on the left and the new scores on the right:
                                 <a href="https://github.com/lisa58/DH150/blob/main/Week2/img/Scores.jpg"
-                                    target="_blank">CLICK HERE</a> <br>
-                                <b>Web Documentation</b><br>
-                                After running lighthouse, I noticed a score of 74 for accessibility. After delving deeper
+                                    target="_blank">CLICK HERE TO SEE IMAGES</a> <br><br>
+                                <b>Web Documentation</b><br><br>
+                                After running lighthouse for the National Museum of Funeral History, 
+                                I noticed a score of 74 for accessibility. After delving deeper 
                                 into what was causing this issue,
-                                I noticed that a low color contrast, a
+                                I noticed the following issues affected the overall score:
+                                <ul>
+                                    <li>low color contrast</li>
+                                    <li>nonsequential heading elements</li>
+                                    <li>no [lang] attribute</li>
+                                    <li>images without [alt] attributes</li>
+                                </ul>
+                                <br>
+                                After copying and pasting the html code into Atom.io, I went on to correct
+                                these issues, however only succeeded in correcting the nonsequential heading elements and the 
+                                no [lang] attribute. I couldn't find the right style code to adjust the colors. When I randomly
+                                chose to adjust the colors, I noticed the website wouldn't let me change it because I noticed no difference 
+                                in my live server. I came across this same problem when I tried to add empty [alt]
+                                attributes for the two decorative images that were affecting the score: it wouldn't show up. For this
+                                project, I deleted the code for the two decorative images, but the images still show up on the site.
+                                Regardless, I managed to increase the orginal accessibility score of 74 to 82 and the original
+                                SEO score of 73 to 78, but just altering the heading element for h4 to h1 and adding a [lang] attribute.
+                                The SEO score went up to 80 once I added more descriptive text to some of the Museum's Read More/Learn More links.
                             </p>
-
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
