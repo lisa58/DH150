@@ -5,20 +5,100 @@
 
 <head id=top>
 
+
 </head>
 
 <nav>
-    <a href="#container">Skip to Content</a>
-    <!--Labiba edit-->
+    <ul>
+        <li><a href="#jazz">Skip to Content</a></li>
+        <li><a href="#documentation">Skip to Documentation</a></li>
+    </ul>
 </nav>
 
 <style>
+    html {
+        position: absolute;
+        font-family: "Lucida Console", "Courier New", monospace;
+        background-color: rgb(153, 68, 68);
+        color: rgb(220, 226, 128);
+    }
+
+    nav {
+        background-color: maroon;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        grid: inherit;
+        -ms-transform: translate(100px, 100px);
+        transform: translate(0px, -12pt);
+    }
+
+    nav ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        -ms-transform: translate(100px, 100px);
+        transform: translate(0px, -0pt);
+    }
+
+    nav li {
+        display: inline-block;
+    }
+
+    #back {
+        background-color: maroon;
+        text-align: center;
+    }
+
+    h1 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgb(238, 255, 0);
+        text-align: center;
+    }
+
+    h2 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgb(238, 255, 0);
+        text-align: center;
+    }
+
+    h3 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgb(238, 255, 0);
+        text-align: center;
+    }
+
+    a:any-link {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+        font-style: italic;
+    }
+
+    a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: rgb(170, 170, 108);
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
     img {
         width: 1000px;
     }
 </style>
 
-<main id ="top">
+<main>
     <h1>Welcome</h1>
     <p>The National Museum of Funeral History is an educational experience like no other
         and
@@ -32,16 +112,19 @@
         tradition
         of
         compassion.</p>
-    <h2>Jazz Funerals of New Orleans</h2>
-    <p>The museum's new exhibit opens on November 12. This exhibition will focus on
-        how
-        a
-        common way to bid farewell to a loved one originated with a jazz funeral or
-        a
-        funeral with music that is now a tradition unique to the city of New
-        Orleans,
-        especially among the African American community.
-    </p>
+    <section id="jazz">
+        <h2>Jazz Funerals of New Orleans</h2>
+
+        <p>The museum's new exhibit opens on November 12. This exhibition will focus on
+            how
+            a
+            common way to bid farewell to a loved one originated with a jazz funeral or
+            a
+            funeral with music that is now a tradition unique to the city of New
+            Orleans,
+            especially among the African American community.
+        </p>
+    </section>
     <a href="https://www.nmfh.org/exhibits/permanent-exhibits/jazz-funerals-of-new-orleans" class="btn btn-green"
         title="Jazz Funerals of New Orleans">Click Here to
         Learn
@@ -89,63 +172,64 @@
         <hr>
 
     </article>
-    
+
 </main>
 
+
+
+
+
+
+
+<prefooter>
+    <p>© 2021 National Museum of Funeral History (NMFH)</p>
+    <p>All Rights Reserved</p>
+    <p><a href="privacy-policy">Privacy Policy</a></p>
+    <p><a href="shipping-policy">Shipping Policy</a></p>
+    <section>
+        <p style=" font-size: medium;">
+
+            This website is a markup of the original <a href="https://www.nmfh.org/" target="_blank">National Museum
+                of Funeral History</a>. The work is
+            only for the assignment02,
+            DH150: Web-coding for UX by Labiba Alam. Here is the accessibility/seo audit result with the
+            original scores shown right below and the new scores below the orginal scores: <br>
+            <hr>
+            <img src="img/Scores3.jpg" alt="original accessibility and seo scores"> <br> <br>
+            <hr>
+            <img src="img/Scores2.jpg" alt="new markup accessibility and seo scores"> <br> <br>
+            <hr>
+</prefooter>
 <script></script>
-
 <footer>
-    <a href="#top">Back to Top</a>
-    <section id="container">
-        <section class="row">
-            <section class="col-xs-12">
-                <section class="pull-left">
+    <section id="back">
+        <a href="#top">Back to Top</a>
+    </section>
+    <h3 id="documentation">Web Documentation</h3>
+    After running lighthouse for the National Museum of Funeral History,
+    I noticed a score of 74 for accessibility. After delving deeper
+    into what was causing this issue,
+    I noticed the following issues affected the overall score: <br> <br>
 
-                    <p>© 2021 National Museum of Funeral History (NMFH)</p>
-                    <p>All Rights Reserved</p>
-                    <p><a href="privacy-policy">Privacy Policy</a></p>
-                    <p><a href="shipping-policy">Shipping Policy</a></p>
-                    <section>
-                        <p class id=documentation style=" font-size: medium;">
+    - low color contrast <br>
+    - nonsequential heading elements <br>
+    - no [lang] attribute <br>
+    - images without [alt] attributes <br>
 
-                            This website is a markup of the original <a href="https://www.nmfh.org/"
-                                target="_blank">National Museum
-                                of Funeral History</a>. The work is
-                            only for the assignment02,
-                            DH150: Web-coding for UX by Labiba Alam. Here is the accessibility/seo audit result with the
-                            original scores shown right below and the new scores below the orginal scores: <br>
-                            <hr>
-                            <img src="img/Scores3.jpg" alt="original accessibility and seo scores" > <br> <br>
-                            <hr>
-                            <img src="img/Scores2.jpg" alt="new markup accessibility and seo scores"> <br> <br>
-                            <hr>
-                            <b>Web Documentation</b><br><br>
-                            After running lighthouse for the National Museum of Funeral History,
-                            I noticed a score of 74 for accessibility. After delving deeper
-                            into what was causing this issue,
-                            I noticed the following issues affected the overall score: <br> <br>
+    <br>
+    The original accessibility score is 74 and the original SEO score is 73.
+    I noticed the issues were nonsequential heading elements and the
+    no [lang] attribute.
+    After fixing the semantic style and adding alt attributes to the scores' images as well as
+    adding sequential heading elements
+    and also adding more descriptive text to some of the Museum's Read More/Learn
+    More links, the accessibility score went up to 100, and SEO score went up to 80. The
+    SEO score doesn't go up as high as the accessibility score because this is a markup
+    of the site and therefore it won't get as much traffic as the original.
+    <br>
+    </p>
+    
 
-                            - low color contrast <br>
-                            - nonsequential heading elements <br>
-                            - no [lang] attribute <br>
-                            - images without [alt] attributes <br>
-
-                            <br>
-                            The original accessibility score is 74 and the original SEO score is 73.
-                            I noticed the issues were nonsequential heading elements and the
-                            no [lang] attribute.
-                            After fixing the semantic style and adding alt attributes to the scores' images as well as
-                            adding sequential heading elements
-                            and also adding more descriptive text to some of the Museum's Read More/Learn
-                            More links, the accessibility score went up to 100, and SEO score went up to 80. The
-                            SEO score doesn't go up as high as the accessibility score because this is a markup
-                            of the site and therefore it won't get as much traffic as the original.
-                            <br>
-                        </p>
-                        <hr>
-                    </section>
-                </section>
-            </section>
 </footer>
 
 
