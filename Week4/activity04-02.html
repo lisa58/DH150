@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <style>
+        #searchBox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        #logo {
+            font-size: 8em;
+            color: purple;
+            user-select: none;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;       
+         }
+
+        #searchInput {
+            font-size: 1em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: purple;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            padding-left: 1em;
+            padding-right: 2.5em;
+            border-radius: 2em;
+            border: 1px solid hsla(220, 50%, 20%, 0.9);
+            width: 80%;
+        }
+
+        #searchInput:hover {
+            filter: drop-shadow(5px 3px 3px gray);
+        }
+
+        #searchInput:focus {
+            border: 2px solid orange;
+            outline: 2px solid orange;
+        }
+
+        #searchBTN {
+            font-size: 1em;
+            padding: 0.5em 1em;
+            border-radius: 1.25em;
+            margin: 0.5em;
+            background-color: purple;
+            color: white;
+            border: 1px solid purple;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #searchBTN:hover {
+            filter: drop-shadow(5px 3px 3px gray);
+            color:gray;
+            cursor: pointer;
+        }
+
+        #searchBTN:focus {
+            border: 2px solid orange;
+            outline: 2px solid gray;            
+            background-color: orange;
+        }
+
+
+        #background {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body id="background" style="background-color: white;">
+
+    <div id="searchBox">
+        <h1 id="logo">Googlé</h1>
+        <input id="searchInput" type="search" placeholder="Search">
+        <button id="searchBTN"> Submit </button>
+    </div>
+
+    <script>
+
+        var myLogo = document.querySelector("#logo");
+        myLogo.innerHTML = "Googlé";
+        myLogo.style.color = "";
+        var myInput = document.querySelector("#searchInput");
+        var myBTN = document.querySelector("#searchBTN");
+        var myBackground = document.querySelector("#background")
+        myBTN.addEventListener("click", changeIT);
+       
+        function changeIT() {
+
+            newLogo = myInput.value;
+            myInput.value = "";
+            myLogo.innerHTML = newLogo;
+            myLogo.style.color = "blue";
+            myLogo.style.backgroundColor = "black";
+            myBTN.style.color = "whit"
+            myBTN.style.backgroundColor = "blue"
+            myBackground.style.backgroundColor = "black"
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
