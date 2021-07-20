@@ -107,6 +107,7 @@
 
     a:focus {
         color: greenyellow;
+        filter:grayscale(1);
         background-color: transparent;
         text-decoration: none;
         font-style: bold;
@@ -300,7 +301,16 @@
             <h2>Web Documentation</h2>
             I chose to rework the first version of my css altered assignment 3 now with invisible buttons
             that appear only appear by tabbing. One of the first things I fixed was the color scheme.
-            Originally I had shown a link color that had a very low contrast ratio with the background. Afte
+            Originally I had shown a link color that had a very low contrast ratio with the background.
+            This time, I used <a href="https://wave.webaim.org/report#/https://lisa58.github.io/DH150/Week4/assignment04.html">wave.webaim.org </a>
+            to help me gauge whether or not the contrast ratios were high enough. This time around, the ratios were high enough. For this assignment, there needs to be 
+            at least 10 interactive items. I only had 8 when I started. I added another invisible bybass block that skips to this web documentation.
+            Then, I added interactive links to the original navigation bar that only had text. Afterwards, I added social media icons and added links to those icons as well.
+            Since there are well over 10 interactive items now, I hid the navigation bar. After these additions, I ran Lighthouse for the new accessibility and SEO score which
+            were 91 and 70, respectively. For accessibility, I made the heading sequential and added accessible names to the buttons to bring the score up to 100.
+            For SEO, I added descriptive links, a < meta name="viewport" >, and a meta description to bring the score up to 100. After bringing the automated testing scores up,
+            I began the manual testing by tabbing through the crawlable links and making sure the focus tab did what I specified and made changes accordingly. I ended up adding a grayscale
+            filter to the links to make it more obvious visually that the tabs were being selected.
             <br>
             </p>
         </section>
