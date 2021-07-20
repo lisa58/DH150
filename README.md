@@ -21,3 +21,5 @@
 ## [Assignment03 Revised with Buttons](Week4/activity04-01.html)
 
 ## [Search Input](Week4/activity04-02.html)
+
+## [Assignment04](Week4/assignment04.html)
