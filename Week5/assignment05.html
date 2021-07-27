@@ -16,33 +16,50 @@
     html {
         position: absolute;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        background-color: black;
-        color: hsla(116, 26%, 65%, 0.9);
+        background-color: transparent;
+        color: forestgreen;
+        font-size:1em;
+    }
+    body{
+        background-color: white;
     }
 
     hr {
         border-color: #959c15;
         border-style: double;
     }
-    nav{
-        display:none;
+
+    nav {
+        padding-bottom: 2em;
     }
-    #navMenu{
-        color:hsla(116, 26%, 65%, 0.9);
+
+    #navMenu {
+        color: hsla(116, 26%, 65%, 0.9);
+    }
+
+    ul {
+        float: right;
+    }
+
+    li {
+        float: right;
+        list-style-type: none;
+        padding: 2em;
     }
 
     button {
-        background-color: #959c15;
+        background-color: black;
+        color: #959c15;
         padding: 1em;
-        box-shadow: 5px 10px gray;
+        box-shadow: 3px 5px gray;
         top: auto;
-   
+
     }
 
     button:focus {
-        background-color: #959c15;
+        background-color: black;
         padding: 1em;
-        box-shadow: 5px 10px gray;
+        box-shadow: 3px 5px coral;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         position: static;
         width: auto;
@@ -50,10 +67,10 @@
     }
 
     button:hover {
-        background-color: transparent;
-        color:coral;
+        background-color: black;
+        color: coral;
         padding: 1em;
-        box-shadow: 5px 10px gray;
+        box-shadow: 3px 5px coral;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         position: static;
         width: auto;
@@ -64,16 +81,52 @@
         color: rgb(170, 170, 108);
         background-color: transparent;
         padding: 1em;
-        box-shadow: 5px 10px gray;
+        box-shadow: 3px 5px gray;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         position: static;
         width: auto;
-        height: auto;  
+        height: auto;
+    }
+
+    #BgFontButton {
+        color: transparent;
+        width: 4em;
+        height: 4em;
+        padding: 0.5em;
+        background-image: url("./icons/big.png");
+        background-size: cover;
+    }
+
+    #SlFontButton {
+        color: transparent;
+        width: 4em;
+        height: 4em;
+        padding: 0.5em;
+        background-image: url("./icons/small.png");
+        background-size: cover;
+    }
+
+
+    #DarkMButton {
+        color: transparent;
+        width: 4em;
+        height: 4em;
+        padding: 0.5em;
+        background-image: url("./icons/darkmode.png");
+        background-size: cover;
+    }
+
+    .dark-mode {
+        background-color: black;
+        color: white;
+    }
+    h1.dark.mode {
+        color: green;
     }
 
     h1 {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        color: #959c15;
+        
         text-align: center;
     }
 
@@ -83,34 +136,33 @@
 
     h2 {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        color: #959c15;
         text-align: center;
     }
 
 
     a:any-link {
-        color: #959c15;
+        color: forestgreen;
         background-color: transparent;
         text-decoration: none;
         font-style: italic;
     }
 
     a:focus {
-        color: greenyellow;
-        filter:grayscale(1);
+        color: forestgreen;
+        filter: grayscale(1);
         background-color: transparent;
         text-decoration: none;
         font-style: bold;
     }
 
     a:visited {
-        color:coral;
+        color: rgb(165, 71, 37);
         background-color: transparent;
         text-decoration: none;
     }
 
     a:hover {
-        color: yellow;
+        color: goldenrod;
         background-color: transparent;
         text-decoration: underline;
     }
@@ -132,21 +184,20 @@
     }
 
     .social-img:hover {
-        filter:grayscale(1);
+        filter: grayscale(1);
     }
-
 </style>
 
 <body>
-    <nav id ="navMenu">
-        <a href ="https://www.nmfh.org/visit-the-museum/" target ="_blank">Visit the Museum </a>|
-        <a href ="https://www.nmfh.org/exhibits/" target ="_blank">Exhibits</a>|
-        <a href ="https://www.nmfh.org/donate/" target ="_blank">Donate </a>|
-        <a href ="https://www.nmfh.org/shop/" target ="_blank">Shop </a>|
-        <a href ="https://www.nmfh.org/education/" target ="_blank">Education </a>|
-        <a href ="https://www.nmfh.org/about/" target ="_blank">About </a>|
-        
+    <nav id="navMenu">
+        <a href="https://www.nmfh.org/visit-the-museum/" target="_blank">Visit the Museum </a>|
+        <a href="https://www.nmfh.org/exhibits/" target="_blank">Exhibits</a>|
+        <a href="https://www.nmfh.org/donate/" target="_blank">Donate </a>|
+        <a href="https://www.nmfh.org/shop/" target="_blank">Shop </a>|
+        <a href="https://www.nmfh.org/education/" target="_blank">Education </a>|
+        <a href="https://www.nmfh.org/about/" target="_blank">About </a>|
     </nav>
+
     <head id="top">
         <button id="skiptocontent" class id="nav" onclick=" location.href='#jazz'">
             Skip to Content
@@ -154,6 +205,12 @@
         <button id="skiptodocumentation" class id="documentation" onclick="location.href='#doc'">
             Skip to Documentation
         </button>
+        <ul>
+            <li><button type="button" id="SlFontButton" aria-label="make font smaller"> </button></li>
+            <li><button type="button" id="BgFontButton" aria-label="make font bigger"></button></li> 
+            <li><button type="button" id="DarkMButton" aria-label="turn dark mode on and off"></button></li>
+        </ul>
+        <br><br><br><br><br><br><br><br><br>
     </head>
 
     <main>
@@ -256,16 +313,16 @@
         <p>Shipping Policy</p>
         <a href="https://www.facebook.com/funeralmuseum/" target="_black"><img
                 src="https://www.nmfh.org/assets/img/elements/footer_fbook.svg" class="social-img" alt="Facebook"
-                title="Facebook"></a>
+                title="Facebook" aria-label="visit National Funeral History Museum FaceBook"></a>
         <a href="https://twitter.com/funeralmuseum/" target="_black"><img
                 src="https://www.nmfh.org/assets/img/elements/footer_twitter.svg" class="social-img" alt="Twitter"
-                title="Twitter"></a>
+                title="Twitter" aria-label="visit National Funeral History Museum Twitter"></a>
         <a href="https://www.flickr.com/photos/135226701@N05/" target="_black"><img
                 src="https://www.nmfh.org/assets/img/elements/footer_flickr.svg" class="social-img" alt="Flickr"
-                title="Flickr"></a>
+                title="Flickr" aria-label="visit National Funeral History Museum Flickr"></a>
         <a href="https://www.tripadvisor.com/Attraction_Review-g56003-d106117-Reviews-National_Museum_of_Funeral_History-Houston_Texas.html"
-            target="_black"><img src="https://www.nmfh.org/assets/img/elements/footer_tripadv.svg"
-                class="social-img" alt="Trip Advisor" title="Trip Advisor"></a>
+            target="_black"><img src="https://www.nmfh.org/assets/img/elements/footer_tripadv.svg" class="social-img"
+                alt="Trip Advisor" title="Trip Advisor" aria-label="visit National Funeral History Museum Trip Advisor"></a>
         <section>
             <p style=" font-size: medium;">
 
@@ -292,19 +349,62 @@
             I chose to rework the first version of my css altered assignment 3 now with invisible buttons
             that appear only appear by tabbing. One of the first things I fixed was the color scheme.
             Originally I had shown a link color that had a very low contrast ratio with the background.
-            This time, I used <a href="https://wave.webaim.org/report#/https://lisa58.github.io/DH150/Week4/assignment04.html">wave.webaim.org </a>
-            to help me gauge whether or not the contrast ratios were high enough. This time around, the ratios were high enough. For this assignment, there needs to be 
-            at least 10 interactive items. I only had 8 when I started. I added another invisible bybass block that skips to this web documentation.
-            Then, I added interactive links to the original navigation bar that only had text. Afterwards, I added social media icons and added links to those icons as well.
-            Since there are well over 10 interactive items now, I hid the navigation bar. After these additions, I ran Lighthouse for the new accessibility and SEO score which
-            were 91 and 70, respectively. For accessibility, I made the heading sequential and added accessible names to the buttons to bring the score up to 100.
-            For SEO, I added descriptive links, a < meta name="viewport" >, and a meta description to bring the score up to 100. After bringing the automated testing scores up,
-            I began the manual testing by tabbing through the crawlable links and making sure the focus tab did what I specified and made changes accordingly. I ended up adding a grayscale
-            filter to the links to make it more obvious visually that the tabs were being selected. The audit results are <a href="https://docs.google.com/spreadsheets/d/13UxY1O5LjTtQkjSMFfvjeAlzYwep1EHRhevlO-Y1Zwg/edit?usp=sharing">shown here</a>.           
-<br>
-            </p>
+            This time, I used <a
+                href="https://wave.webaim.org/report#/https://lisa58.github.io/DH150/Week4/assignment04.html">wave.webaim.org
+            </a>
+            to help me gauge whether or not the contrast ratios were high enough. This time around, the ratios were high
+            enough. For this assignment, there needs to be
+            at least 10 interactive items. I only had 8 when I started. I added another invisible bybass block that
+            skips to this web documentation.
+            Then, I added interactive links to the original navigation bar that only had text. Afterwards, I added
+            social media icons and added links to those icons as well.
+            Since there are well over 10 interactive items now, I hid the navigation bar. After these additions, I ran
+            Lighthouse for the new accessibility and SEO score which
+            were 91 and 70, respectively. For accessibility, I made the heading sequential and added accessible names to
+            the buttons to bring the score up to 100.
+            For SEO, I added descriptive links, a < meta name="viewport">, and a meta description to bring the score up
+                to 100. After bringing the automated testing scores up,
+                I began the manual testing by tabbing through the crawlable links and making sure the focus tab did what
+                I specified and made changes accordingly. I ended up adding a grayscale
+                filter to the links to make it more obvious visually that the tabs were being selected. The audit
+                results are <a
+                    href="https://docs.google.com/spreadsheets/d/13UxY1O5LjTtQkjSMFfvjeAlzYwep1EHRhevlO-Y1Zwg/edit?usp=sharing">shown
+                    here</a>.
+                <br>
+                </p>
         </section>
-        <script></script>
+        <script>
+            var myBigFontBTN = document.querySelector("#BgFontButton");
+            myBigFontBTN.addEventListener("click", MakeFontBigger);
+            function MakeFontBigger() {
+                // change font-size;
+                myBody.style.fontSize = "2em";
+            }
+            var myBody = document.querySelector("body");
+
+            var mySmallFontBTN = document.querySelector("#SlFontButton");
+            mySmallFontBTN.addEventListener("click", MakeFontSmaller);
+            function MakeFontSmaller() {
+                // change font-size;
+                myBody.style.fontSize = "1em";
+            }
+
+            var myDarkMBTN = document.querySelector("#DarkMButton");
+            myDarkMBTN.addEventListener("click", MakeItDark);
+            function MakeItDark() {
+                myBody.classList.toggle("dark-mode");
+                myHeader.classList.toggle("dark-mode");
+
+                const allLinks = document.links;
+                    for(let link of allLinks) {
+                        link.classList.toggle("dark-mode-link");
+                    }
+            }
+            var myHeader = document.querySelector("header");
+
+
+
+        </script>
 
     </footer>
 </body>
