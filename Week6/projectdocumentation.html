@@ -23,14 +23,14 @@
 
     header {
         text-align: center;
-        background-color: hsl(240, 0%, 25%);
+        background-color: rgb(108, 39, 39);
         color: hsl(240, 0%, 85%);
         padding-bottom: 2em;
     }
 
     footer {
         text-align: center;
-        background-color: hsl(240, 0%, 25%);
+        background-color: rgb(108, 39, 39);
         color: white;
         font-size: 0.95em;
         line-height: 3em;
@@ -46,14 +46,30 @@
     }
 
     button {
-        background-color: hsl(240, 0%, 25%);
+        background-color: rgb(108, 39, 39);
         color: white;
         font-size: 0.85em;
         line-height: 2em;
         border-radius: 10px;
-        width: 100%;
+        width: 50%;
     }
-
+    button:hover {
+        background-color: black;
+        color: white;
+        font-size: 0.85em;
+        line-height: 2em;
+        border-radius: 10px;
+        width: 50%;
+    }
+    button:focus {
+        background-color: black;
+        color: white;
+        filter: grayscale();
+        font-size: 0.85em;
+        line-height: 2em;
+        border-radius: 10px;
+        width: 50%;
+    }
 
     .myButton {
         position: absolute;
@@ -62,30 +78,49 @@
         width: 1px;
         height: 1px;
         overflow: hidden;
-
-        background-color: lightgray;
+        background-color: black;
         text-decoration: none;
-        color: black;
-        /* border-radius: 2.5em; */
+        color: rgb(96, 27, 27);
         padding: 10px;
-        /* box-shadow: 0px 1px 1px 1px hsla(223, 20%, 20%, 0.6); */
-        /* filter: drop-shadow(1px 1px 1px darkgray);*/
         margin: 20px;
     }
 
     .myButton:focus {
-        position: static;
-
+        position: static;       
         width: auto;
         height: auto;
-        background-color: black;
-        /* 223°, 75%, 41%*/
+        background-color: gray;
         text-decoration: none;
-        color: white;
+        color: white;    
+        padding: 20px;
         margin: 20px;
-        /* outline: none; */
+    }
+    a:any-link {
+        color: black;
+        text-decoration: none;
+        
     }
 
+    a:focus {
+        text-decoration: underline;
+        font-style: bold;
+    }
+
+    a:visited {
+        color: rgb(165, 71, 37);
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: goldenrod;
+       
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: yellow;
+        text-decoration: underline;
+    }
     .imgBox {
         width: 15vw;
         margin: 1vw;
@@ -105,28 +140,29 @@
     #M02 {
         width: 15vw;
         height: 9vw;
-        background-image: url("https://ux-ui-design-lab.github.io/DH150-UX-WebCoding/museum-cocacola-front-audit.png");
+        background-image: url("./img/M02.jpg");
         background-size: cover;
     }
 
     #M03 {
         width: 15vw;
         height: 9vw;
-        background-image: url("https://ux-ui-design-lab.github.io/DH150-UX-WebCoding/museum-schulz-time-audit.png");
+        background-image: url("./img/M03.jpg");
         background-size: cover;
     }
 
-    #M04{
+    #M04 {
         width: 15vw;
         height: 9vw;
-        background-image: url("https://ux-ui-design-lab.github.io/DH150-UX-WebCoding/museum-tustin-hewes-audits.png");
+
+        background-image: url("./img/M04.jpg");
         background-size: cover;
     }
 
-    #M05{
+    #M05 {
         width: 15vw;
         height: 9vw;
-        background-image: url("https://ux-ui-design-lab.github.io/DH150-UX-WebCoding/museum-pez-location-audits.png");
+        background-image: url("./img/M05.jpg");
         background-size: cover;
     }
 
@@ -140,19 +176,15 @@
         width: 96vw;
         gap: 10px;
 
-        /* margin:1vw; */
     }
 
-    .img {
+    img {
         grid-row: 1;
         grid-column: 1;
-
         margin: 1vw;
         padding: 1vw;
         background-color: lightgray;
-
-        /* inline-size: 25%;
-  overflow-wrap: break-word; */
+        height:200px;
     }
 
     .description {
@@ -191,7 +223,7 @@
     }
 
     .active {
-        background-color: hsl(240, 0%, 25%);
+        background-color: rgb(68, 53, 53);
         color: white;
     }
 
@@ -207,8 +239,6 @@
     @media(min-width: 601px) and (max-width: 910px) {
         li {
             display: block;
-            /* float: left;*/
-            width: 100vw;
             margin: 1px;
         }
 
@@ -219,7 +249,7 @@
 
 
     @media(max-width: 600px) {
-
+ 
         .dummy {
             display: none;
         }
@@ -227,12 +257,12 @@
         .description {
             padding: 1vw;
             grid-row: 1;
-            grid-column: 1/3;
+            grid-column: 1/5;
         }
 
         li {
             display: block;
-            /* float: left;*/
+            float: left;
             width: 100vw;
             margin: 1px;
         }
@@ -241,6 +271,7 @@
             padding-top: 3em;
         }
     }
+
 </style>
 
 <body>
@@ -248,27 +279,37 @@
     <header>
         <nav>
             <ul class="myNav">
-                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis" class="active"> Official NMFH Website</a></li>
-                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis">Assignment02: First Markup Website</a></li>
-                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis">Assignment03 Second Markup Website </a></li>
-                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis">Assignment04: Third Markup Website </a></li>
-                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis">Assignment05: Fourth Markup Website  </a></li>
+                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis" class="active">National Funeral History
+                        Museum</a>
+                </li>
+                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis">Museum of Death</a>
+                </li>
+                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis">International Cyptozoology Museum</a>
+                </li>
+                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis">Museum of Broken Relationships</a>
+                </li>
+                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis">International Banana Museum</a>
+                </li>
+
             </ul>
         </nav>
         <!-- img src="https://source.unsplash.com/1600x900/?getty,museum" -->
         <br><br>
-        <h1> Web-accessibility project: Getty Research Tool Site </h1>
-        <h2> DH150 2021 Summer - Project documentation by Awesome Student Name</h2>
+        <h1> Web-accessibility project: <br> National Funeral History Museum Research Process</h1>
+        <h2> DH150 2021 Summer <br> Project Documentation by Labiba Alam</h2>
         <hr>
 
-        <h3> About the project </h3>
-        <p> This project is to test and improve the web-accessibility of the museum websites.</p>
+        <h3> About Project </h3>
+        <p> The following documentation tests and improves web-accessibility of the official National Funeral History
+            Museum
+            and as shown in four markup websites.
+        </p>
 
     </header>
 
     <main id="main">
         <section id="research">
-            <h3> Research <a class="permaLink" href="#research" rel="bookmark" title="research">Research</a> </h3>
+            <h3> <a class="permaLink" href="#research" rel="bookmark" title="research">Research</a> </h3>
             <p> I started research about the museum websites and narrowed down into five museums for accessibility/seo
                 audit. I used a Chrome Development tool named lighthouse to diagnose the accessibility and SEO score of
                 those websites.<br></p>
@@ -276,38 +317,38 @@
             <div id="images">
                 <article class="imgBox">
                     <p id="M01"> </p>
-                    <p> 1) Getty Museum Research <a href="https://www.getty.edu/research/tools/" target="_blank"
-                            title="go to getty research tool site"> https://www.getty.edu/research/tools/ </a>,
-                        Accessibility (79), SEO (82)</p>
+                    <p> 1) <a href="https://www.nmfh.org/" target="_blank" title="go to site"> National Funeral History
+                            Museum</a>, <br>
+                        Accessibility (95), SEO (80) </p>
                 </article>
 
                 <article class="imgBox">
                     <p id="M02"></p>
-                    <p> 2) Coca-Cola Museum, <a href="https://www.worldofcoca-cola.com/" target="_blank"
-                            title="go to world of coca-cola museum site"> https://www.worldofcoca-cola.com/ </a>,
-                        Accessibility (82), SEO (83) </p>
+                    <p> 2) <a href="http://www.museumofdeath.net/" target="_blank" title="go to site"> Museum of
+                            Death</a>, <br>
+                        Accessibility (93), SEO (80) </p>
                 </article>
 
                 <article class="imgBox">
                     <p id="M03"> </p>
-                    <p> Snoopy Museum, <a href="https://www.schulzmuseum.org/timeline/" target="_blank"
-                            title="go to Schulz - Snoopy museum site"> https://www.schulzmuseum.org/timeline/ </a>,
-                        Accessibility (87), SEO (92) </p>
+                    <p> 3) <a href="https://cryptozoologymuseum.com/" target="_blank" title="go to site">International
+                            Cyptozoology Museum</a>, <br>
+                        Accessibility (100), SEO (100) </p>
                 </article>
 
                 <article class="imgBox">
                     <p id="M04"> </p>
-                    <p> 4) Tustin history, <a href="https://www.tustinhistory.com/articles/hewes-home.htm/"
-                            target="_blank" title="go to tustin Hewes museum site">
-                            https://www.tustinhistory.com/articles/hewes-home.htm/ </a>, Accessibility (68), SEO (70)
-                    </p>
+                    <p> 4) <a href="https://brokenships.com/" target="_blank" title="go to  site">
+                            Museum of Broken Relationships</a>, <br>
+                        Accessibility (68), SEO (70) </p>
+
                 </article>
 
                 <article class="imgBox">
                     <p id="M05"> </p>
-                    <p> 5) Pez Museum, <a href="https://us.pez.com/pages/hours-and-location" target="_blank"
-                            title="go to PEZ museum site"> https://us.pez.com/pages/hours-and-location </a>,
-                        Accessibility (89), SEO (92)</p>
+                    <p> 5) <a href="http://www.internationalbananamuseum.com/" target="_blank" title="go to site">
+                            International Banana Museum</a>, <br>
+                        Accessibility (93), SEO (80) </p>
                 </article>
             </div>
 
@@ -317,40 +358,40 @@
         </section>
 
         <section id="project">
-            <h3> Project Design Process <a class="permaLink" href="#project" rel="bookmark"
-                    title="Design Process">Research</a>
+            <h3> <a class="permaLink" href="#project" rel="bookmark"
+                    title="Design Process">Project Design Process </a>
             </h3>
             <p> The getty research tool site was chosen for the project. List the multiple reasons for the musuem of
                 your choice. Here are the process I develop and test to improve its accessibililty and seo.</p>
             <article class="card" id="semanticStructure">
-                <p class="dummy"> semantic structure image </p>
+                <p class="dummy">  <img src="./img/sem.jpg" alt=""> </p>
                 <p class="description"> Describe what you did to ensure the semantic html and provide the link to
                     assignment02. <br><br>
-                    <button> Check the outcome of semantic structure (assignment02)</button>
+                    <button onclick="location.href='https://lisa58.github.io/DH150/Week2/assignment02.html'" target="_blank">Check the outcome of semantic structure (assignment02)</button>
                 </p>
             </article>
 
             <article class="card" id="colorContrast">
-                <p class="dummy"> color contrast image </p>
+                <p class="dummy">  <img src="./img/col.jpg" alt="">  </p>
                 <p class="description"> Describe what you did for color-variation (with screenshots) and provide the
                     links to darkmode, lightmode, and monochomatic version. <br><br>
-                    <button> Check the outcome of color contrast (assingment03)</button>
+                    <button onclick="location.href='https://lisa58.github.io/DH150/Week3/assignment03-1.html'"> Check the outcome of color contrast (assingment03)</button>
                 </p>
             </article>
 
             <article class="card" id="keyboard">
-                <p class="dummy"> color contrast image </p>
+                <p class="dummy"> <img src="./img/key.jpg" alt=""> </p>
                 <p class="description">Describe what you did to test keyboard accessibility and tab-order. Provide the
                     link to assignment04.<br><br>
-                    <button> Check the outcome of keyboard accessibility (assingment04)</button>
+                    <button onclick="location.href='https://lisa58.github.io/DH150/Week4/assignment04.html'" > Check the outcome of keyboard accessibility (assingment04)</button>
                 </p>
             </article>
 
             <article class="card" id="ariaLabel">
-                <p class="dummy"> color contrast image </p>
+                <p class="dummy"> <img src="./img/aria.jpg" alt=""> </p>
                 <p class="description">Describe what you did to support assistive technologies (or screen readers).
                     Provide the link to assignment05. <br><br>
-                    <button> Check the outcome of aria- and screen-reader-manual testing (assingment05)</button>
+                    <button onclick="location.href='https://lisa58.github.io/DH150/Week5/assignment05.html'" > Check the outcome of aria- and screen-reader-manual testing (assingment05)</button>
                 </p>
 
             </article>
@@ -366,7 +407,8 @@
         </section>
     </main>
     <footer>
-        <p> YOUR NAME (contact info: email), copyright 2021 </p>
+        <p> Labiba Alam (Contact Info: <a href="mailto:labiba.alam99@gmail.com">labiba.alam99@gmail.com</a>), &copy;
+            Copyright 2021 </p>
     </footer>
     <script>
         var myTitle = document.querySelector("title");
