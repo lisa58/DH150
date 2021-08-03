@@ -32,7 +32,7 @@
 
     main {
         margin: 20px;
-        width: 100vw;
+        width: 90vw;
     }
 
     section {
@@ -47,6 +47,7 @@
         border-radius: 10px;
         width: 100%;
     }
+
     button:hover {
         background-color: black;
         color: white;
@@ -55,6 +56,7 @@
         border-radius: 10px;
         width: 100%;
     }
+
     button:focus {
         background-color: black;
         color: white;
@@ -80,19 +82,20 @@
     }
 
     .myButton:focus {
-        position: static;       
+        position: static;
         width: auto;
         height: auto;
         background-color: gray;
         text-decoration: none;
-        color: white;    
+        color: white;
         padding: 20px;
         margin: 20px;
     }
+
     a:any-link {
         color: black;
         text-decoration: none;
-        
+
     }
 
     a:focus {
@@ -107,7 +110,7 @@
 
     a:hover {
         color: goldenrod;
-       
+
         text-decoration: underline;
     }
 
@@ -115,6 +118,7 @@
         color: yellow;
         text-decoration: underline;
     }
+
     .imgBox {
         width: 15vw;
         margin: 1vw;
@@ -178,7 +182,7 @@
         margin: 1vw;
         padding: 1vw;
         background-color: lightgray;
-        height:200px;
+        height: 200px;
     }
 
     .description {
@@ -195,9 +199,18 @@
         width: 100vw;
         height: 3em;
     }
+    nav ul {
+            display: flex;
+            width: 100vw;
+            margin: 1px;
+        }
+
+    nav li {
+            flex: auto;
+        }
 
     li {
-        /* display: inline; */
+        display: inline;
         float: left;
         margin: 1px;
     }
@@ -241,6 +254,7 @@
             padding-top: 3em;
         }
     }
+
     footer {
         text-align: center;
         background-color: rgb(108, 39, 39);
@@ -252,7 +266,7 @@
     }
 
     @media(max-width: 600px) {
- 
+
         img {
             display: none;
         }
@@ -263,27 +277,33 @@
             grid-column: 1/3;
         }
 
-        li {
-            display: block;
-            float: left;
+        nav ul {
+            display: flex;
             width: 100vw;
             margin: 1px;
         }
 
+       nav li {
+            flex: auto;
+        }
+
+
+
+
         h1 {
             padding-top: 3em;
         }
-        footer {
-        text-align: center;
-        background-color: rgb(108, 39, 39);
-        color: white;
-        font-size: 0.95em;
-        line-height: 3em;
-        height: 6em;
-        margin:1pt;
-    }
-    }
 
+        footer {
+            text-align: center;
+            background-color: rgb(108, 39, 39);
+            color: white;
+            font-size: 0.95em;
+            line-height: 3em;
+            height: 6em;
+            margin: 1pt;
+        }
+    }
 </style>
 
 <body>
@@ -370,24 +390,25 @@
         </section>
 
         <section id="project">
-            <h3> <a class="permaLink" href="#project" rel="bookmark"
-                    title="Design Process">Project Design Process </a>
+            <h3> <a class="permaLink" href="#project" rel="bookmark" title="Design Process">Project Design Process </a>
             </h3>
             <p> The getty research tool site was chosen for the project. List the multiple reasons for the musuem of
                 your choice. Here are the process I develop and test to improve its accessibililty and seo.</p>
             <article class="card" id="semanticStructure">
-                <p class="dummy">  <img src="./img/sem.jpg" alt=""> </p>
+                <p class="dummy"> <img src="./img/sem.jpg" alt=""> </p>
                 <p class="description"> Describe what you did to ensure the semantic html and provide the link to
                     assignment02. <br><br>
-                    <button onclick="location.href='https://lisa58.github.io/DH150/Week2/assignment02.html'" target="_blank">Check the outcome of semantic structure (assignment02)</button>
+                    <button onclick="location.href='https://lisa58.github.io/DH150/Week2/assignment02.html'"
+                        target="_blank">Check the outcome of semantic structure (assignment02)</button>
                 </p>
             </article>
 
             <article class="card" id="colorContrast">
-                <p class="dummy">  <img src="./img/col.jpg" alt="">  </p>
+                <p class="dummy"> <img src="./img/col.jpg" alt=""> </p>
                 <p class="description"> Describe what you did for color-variation (with screenshots) and provide the
                     links to darkmode, lightmode, and monochomatic version. <br><br>
-                    <button onclick="location.href='https://lisa58.github.io/DH150/Week3/assignment03-1.html'"> Check the outcome of color contrast (assingment03)</button>
+                    <button onclick="location.href='https://lisa58.github.io/DH150/Week3/assignment03-1.html'"> Check
+                        the outcome of color contrast (assingment03)</button>
                 </p>
             </article>
 
@@ -395,7 +416,8 @@
                 <p class="dummy"> <img src="./img/key.jpg" alt=""> </p>
                 <p class="description">Describe what you did to test keyboard accessibility and tab-order. Provide the
                     link to assignment04.<br><br>
-                    <button onclick="location.href='https://lisa58.github.io/DH150/Week4/assignment04.html'" > Check the outcome of keyboard accessibility (assingment04)</button>
+                    <button onclick="location.href='https://lisa58.github.io/DH150/Week4/assignment04.html'"> Check the
+                        outcome of keyboard accessibility (assingment04)</button>
                 </p>
             </article>
 
@@ -403,7 +425,8 @@
                 <p class="dummy"> <img src="./img/aria.jpg" alt=""> </p>
                 <p class="description">Describe what you did to support assistive technologies (or screen readers).
                     Provide the link to assignment05. <br><br>
-                    <button onclick="location.href='https://lisa58.github.io/DH150/Week5/assignment05.html'" > Check the outcome of aria- and screen-reader-manual testing (assingment05)</button>
+                    <button onclick="location.href='https://lisa58.github.io/DH150/Week5/assignment05.html'"> Check the
+                        outcome of aria- and screen-reader-manual testing (assingment05)</button>
                 </p>
 
             </article>
