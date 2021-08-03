@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> DH150 Web-coding for UX project: Redesign National Mueseum of Funeral History For Better Accessibility
+    </title>
+    <meta charset="utf-8">
+    <meta name="description" content="Web Coding for User Experience in Digital Humanities">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Accessibility, SEO">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Crimson Text', serif;
+        font-size: 1.2em;
+    }
+
+    header {
+        text-align: center;
+        background-color: hsl(240, 0%, 25%);
+        color: hsl(240, 0%, 85%);
+        padding-bottom: 2em;
+    }
+
+    footer {
+        text-align: center;
+        background-color: hsl(240, 0%, 25%);
+        color: white;
+        font-size: 0.95em;
+        line-height: 3em;
+        height: 3em;
+    }
+
+    main {
+        margin: 20px;
+    }
+
+    section {
+        border-bottom: 1px dotted gray;
+    }
+
+    button {
+        background-color: hsl(240, 0%, 25%);
+        color: white;
+        font-size: 0.85em;
+        line-height: 2em;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+
+    .myButton {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+
+        background-color: lightgray;
+        text-decoration: none;
+        color: black;
+        /* border-radius: 2.5em; */
+        padding: 10px;
+        /* box-shadow: 0px 1px 1px 1px hsla(223, 20%, 20%, 0.6); */
+        /* filter: drop-shadow(1px 1px 1px darkgray);*/
+        margin: 20px;
+    }
+
+    .myButton:focus {
+        position: static;
+
+        width: auto;
+        height: auto;
+        background-color: black;
+        /* 223°, 75%, 41%*/
+        text-decoration: none;
+        color: white;
+        margin: 20px;
+        /* outline: none; */
+    }
+
+    .imgBox {
+        width: 15vw;
+        margin: 1vw;
+        inline-size: 15vw;
+        overflow-wrap: break-word;
+        padding: 1vw;
+        background-color: lightgray;
+    }
+
+    #M01 {
+        width: 15vw;
+        height: 9vw;
+        background-image: url("./img/M01.jpg");
+        background-size: cover;
+    }
+
+    #M02 {
+        width: 15vw;
+        height: 9vw;
+        background-image: url("https://ux-ui-design-lab.github.io/DH150-UX-WebCoding/museum-cocacola-front-audit.png");
+        background-size: cover;
+    }
+
+    #M03 {
+        width: 15vw;
+        height: 9vw;
+        background-image: url("https://ux-ui-design-lab.github.io/DH150-UX-WebCoding/museum-schulz-time-audit.png");
+        background-size: cover;
+    }
+
+    #M04{
+        width: 15vw;
+        height: 9vw;
+        background-image: url("https://ux-ui-design-lab.github.io/DH150-UX-WebCoding/museum-tustin-hewes-audits.png");
+        background-size: cover;
+    }
+
+    #M05{
+        width: 15vw;
+        height: 9vw;
+        background-image: url("https://ux-ui-design-lab.github.io/DH150-UX-WebCoding/museum-pez-location-audits.png");
+        background-size: cover;
+    }
+
+    #images {
+        display: inline-flex;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        width: 96vw;
+        gap: 10px;
+
+        /* margin:1vw; */
+    }
+
+    .dummy {
+        /* height: 10vh; */
+        grid-row: 1;
+        grid-column: 1;
+
+        margin: 1vw;
+        padding: 1vw;
+        background-color: lightgray;
+
+        /* inline-size: 25%;
+  overflow-wrap: break-word; */
+    }
+
+    .description {
+        padding: 1vw;
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .myNav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        width: 100vw;
+        height: 3em;
+    }
+
+    li {
+        /* display: inline; */
+        float: left;
+        margin: 1px;
+    }
+
+    li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        background-color: lightgray;
+    }
+
+    li a:hover {
+        background-color: #111;
+        color: white;
+    }
+
+    .active {
+        background-color: hsl(240, 0%, 25%);
+        color: white;
+    }
+
+    .permaLink {
+        color: white;
+        overflow: hidden;
+    }
+
+    .permaLink:hover {
+        color: black;
+    }
+
+    @media(min-width: 601px) and (max-width: 910px) {
+        li {
+            display: block;
+            /* float: left;*/
+            width: 100vw;
+            margin: 1px;
+        }
+
+        h1 {
+            padding-top: 3em;
+        }
+    }
+
+
+    @media(max-width: 600px) {
+
+        .dummy {
+            display: none;
+        }
+
+        .description {
+            padding: 1vw;
+            grid-row: 1;
+            grid-column: 1/3;
+        }
+
+        li {
+            display: block;
+            /* float: left;*/
+            width: 100vw;
+            margin: 1px;
+        }
+
+        h1 {
+            padding-top: 3em;
+        }
+    }
+</style>
+
+<body>
+    <a href="#main" rel="bookmark" title="research main" class="myButton"> skip to contents </a>
+    <header>
+        <nav>
+            <ul class="myNav">
+                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis" class="active"> Official NMFH Website</a></li>
+                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis">Assignment02: First Markup Website</a></li>
+                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis">Assignment03 Second Markup Website </a></li>
+                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis">Assignment04: Third Markup Website </a></li>
+                <li> <a href="#M01" rel="bookmark" title="NFMH website analysis">Assignment05: Fourth Markup Website  </a></li>
+            </ul>
+        </nav>
+        <!-- img src="https://source.unsplash.com/1600x900/?getty,museum" -->
+        <br><br>
+        <h1> Web-accessibility project: Getty Research Tool Site </h1>
+        <h2> DH150 2021 Summer - Project documentation by Awesome Student Name</h2>
+        <hr>
+
+        <h3> About the project </h3>
+        <p> This project is to test and improve the web-accessibility of the museum websites.</p>
+
+    </header>
+
+    <main id="main">
+        <section id="research">
+            <h3> Research <a class="permaLink" href="#research" rel="bookmark" title="research">Research</a> </h3>
+            <p> I started research about the museum websites and narrowed down into five museums for accessibility/seo
+                audit. I used a Chrome Development tool named lighthouse to diagnose the accessibility and SEO score of
+                those websites.<br></p>
+
+            <div id="images">
+                <article class="imgBox">
+                    <p id="M01"> </p>
+                    <p> 1) Getty Museum Research <a href="https://www.getty.edu/research/tools/" target="_blank"
+                            title="go to getty research tool site"> https://www.getty.edu/research/tools/ </a>,
+                        Accessibility (79), SEO (82)</p>
+                </article>
+
+                <article class="imgBox">
+                    <p id="M02"></p>
+                    <p> 2) Coca-Cola Museum, <a href="https://www.worldofcoca-cola.com/" target="_blank"
+                            title="go to world of coca-cola museum site"> https://www.worldofcoca-cola.com/ </a>,
+                        Accessibility (82), SEO (83) </p>
+                </article>
+
+                <article class="imgBox">
+                    <p id="M03"> </p>
+                    <p> Snoopy Museum, <a href="https://www.schulzmuseum.org/timeline/" target="_blank"
+                            title="go to Schulz - Snoopy museum site"> https://www.schulzmuseum.org/timeline/ </a>,
+                        Accessibility (87), SEO (92) </p>
+                </article>
+
+                <article class="imgBox">
+                    <p id="M04"> </p>
+                    <p> 4) Tustin history, <a href="https://www.tustinhistory.com/articles/hewes-home.htm/"
+                            target="_blank" title="go to tustin Hewes museum site">
+                            https://www.tustinhistory.com/articles/hewes-home.htm/ </a>, Accessibility (68), SEO (70)
+                    </p>
+                </article>
+
+                <article class="imgBox">
+                    <p id="M05"> </p>
+                    <p> 5) Pez Museum, <a href="https://us.pez.com/pages/hours-and-location" target="_blank"
+                            title="go to PEZ museum site"> https://us.pez.com/pages/hours-and-location </a>,
+                        Accessibility (89), SEO (92)</p>
+                </article>
+            </div>
+
+            <p id="analylsis"> some analysis, especiailly what kinds of codes looks influential on the seo score and
+                accessibity </p>
+
+        </section>
+
+        <section id="project">
+            <h3> Project Design Process <a class="permaLink" href="#project" rel="bookmark"
+                    title="Design Process">Research</a>
+            </h3>
+            <p> The getty research tool site was chosen for the project. List the multiple reasons for the musuem of
+                your choice. Here are the process I develop and test to improve its accessibililty and seo.</p>
+            <article class="card" id="semanticStructure">
+                <p class="dummy"> semantic structure image </p>
+                <p class="description"> Describe what you did to ensure the semantic html and provide the link to
+                    assignment02. <br><br>
+                    <button> Check the outcome of semantic structure (assignment02)</button>
+                </p>
+            </article>
+
+            <article class="card" id="colorContrast">
+                <p class="dummy"> color contrast image </p>
+                <p class="description"> Describe what you did for color-variation (with screenshots) and provide the
+                    links to darkmode, lightmode, and monochomatic version. <br><br>
+                    <button> Check the outcome of color contrast (assingment03)</button>
+                </p>
+            </article>
+
+            <article class="card" id="keyboard">
+                <p class="dummy"> color contrast image </p>
+                <p class="description">Describe what you did to test keyboard accessibility and tab-order. Provide the
+                    link to assignment04.<br><br>
+                    <button> Check the outcome of keyboard accessibility (assingment04)</button>
+                </p>
+            </article>
+
+            <article class="card" id="ariaLabel">
+                <p class="dummy"> color contrast image </p>
+                <p class="description">Describe what you did to support assistive technologies (or screen readers).
+                    Provide the link to assignment05. <br><br>
+                    <button> Check the outcome of aria- and screen-reader-manual testing (assingment05)</button>
+                </p>
+
+            </article>
+
+            <article id="reflection">
+                <p> Write a brief reflection what you learned about evaluation and development with web-coding to
+                    improve web accessibility and SEO. Provide a summary of before (original site) and after (your
+                    mockup site) SEO and web accessibility audit report. You may need to provide a report or specifics
+                    with the evidence you have improved the work. State what you would want to work more (or any
+                    remaining questions) for the future work.</p>
+            </article>
+
+        </section>
+    </main>
+    <footer>
+        <p> YOUR NAME (contact info: email), copyright 2021 </p>
+    </footer>
+    <script>
+        var myTitle = document.querySelector("title");
+        myTitle.innerHTML = "DH150 Web-coding for UX project: Redesign Getty Research tool site for better Accessibility";
+    </script>
+
+</body>
+
+</html>

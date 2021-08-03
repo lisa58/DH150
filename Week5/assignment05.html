@@ -43,7 +43,7 @@
     }
 
     li {
-        float: right;
+        float: left;
         list-style-type: none;
         padding: 2em;
     }
@@ -200,7 +200,7 @@
         <a href="https://www.nmfh.org/about/" target="_blank">About </a>|
     </nav>
 
-    <head id="top">
+    <header id="top">
         <button id="skiptocontent" class id="nav" onclick=" location.href='#jazz'">
             Skip to Content
         </button>
@@ -213,7 +213,7 @@
             <li><button type="button" id="DarkMButton" aria-label="turn dark mode on and off"></button></li>
         </ul>
         <br><br><br><br><br><br><br><br><br>
-    </head>
+    </header>
 
     <main>
         <h1 id="w">Welcome</h1>
@@ -266,8 +266,8 @@
             throughout
             the
             museum and social distancing procedures are in place.
-            <a href="https://www.nmfh.org/visit-the-museum/" title="Important Update"
-                target="_blank">Click Here to Learn More</a>
+            <a href="https://www.nmfh.org/visit-the-museum/" title="Important Update" target="_blank">Click Here to
+                Learn More</a>
         </p>
         <h2>Visit Our Gift Shop</h2>
         <p>Visit the Museum's gift shop for a variety of unique gifts and one-of-a-kind
@@ -309,40 +309,73 @@
 
 
 
-    <prefooter>
-        <p>© 2021 National Museum of Funeral History (NMFH)</p>
-        <p>All Rights Reserved</p>
-        <p>Privacy Policy</p>
-        <p>Shipping Policy</p>
-        <a href="https://www.facebook.com/funeralmuseum/" target="_black"><img
-                src="https://www.nmfh.org/assets/img/elements/footer_fbook.svg" class="social-img" alt="Facebook"
-                title="Facebook" aria-label="visit National Funeral History Museum FaceBook"></a>
-        <a href="https://twitter.com/funeralmuseum/" target="_black"><img
-                src="https://www.nmfh.org/assets/img/elements/footer_twitter.svg" class="social-img" alt="Twitter"
-                title="Twitter" aria-label="visit National Funeral History Museum Twitter"></a>
-        <a href="https://www.flickr.com/photos/135226701@N05/" target="_black"><img
-                src="https://www.nmfh.org/assets/img/elements/footer_flickr.svg" class="social-img" alt="Flickr"
-                title="Flickr" aria-label="visit National Funeral History Museum Flickr"></a>
-        <a href="https://www.tripadvisor.com/Attraction_Review-g56003-d106117-Reviews-National_Museum_of_Funeral_History-Houston_Texas.html"
-            target="_black"><img src="https://www.nmfh.org/assets/img/elements/footer_tripadv.svg" class="social-img"
-                alt="Trip Advisor" title="Trip Advisor"
-                aria-label="visit National Funeral History Museum Trip Advisor"></a>
-        <section>
-            <p style=" font-size: medium;">
 
-                This website is a markup of the original <a href="https://www.nmfh.org/" target="_blank">National Museum
-                    of Funeral History</a>. The work is
-                only for the assignment02,
-                DH150: Web-coding for UX by Labiba Alam. Here is the accessibility/seo audit result with the
-                original scores shown right below and the new scores below the orginal scores: <br>
-                <hr>
-                <img src="./img/Scores3.jpg" alt="original accessibility and seo scores"> <br> <br>
-                <hr>
-                <img src="./img/Scores2.jpg" alt="new markup accessibility and seo scores"> <br> <br>
-                <hr>
-    </prefooter>
 
-    <footer>
+
+    <script>
+        var myBigFontBTN = document.querySelector("#BgFontButton");
+        var myBody = document.querySelector("body");
+        var myHeader = document.querySelector("header");
+        myBigFontBTN.addEventListener("click", MakeFontBigger);
+        function MakeFontBigger() {
+            // change font-size;
+            myBody.style.fontSize = "2em";
+        }
+        
+
+        var mySmallFontBTN = document.querySelector("#SlFontButton");
+        mySmallFontBTN.addEventListener("click", MakeFontSmaller);
+        function MakeFontSmaller() {
+            // change font-size;
+            myBody.style.fontSize = "1em";
+        }
+
+        var myDarkMBTN = document.querySelector("#DarkMButton");
+        myDarkMBTN.addEventListener("click", MakeItDark);
+        function MakeItDark() {
+            myBody.classList.toggle("dark-mode");
+            myHeader.classList.toggle("dark-mode");
+
+            const allLinks = document.links;
+            for (let link of allLinks) {
+                link.classList.toggle("dark-mode-link");
+            }
+        }
+        
+    </script>
+</body>
+<footer>
+
+    <p>© 2021 National Museum of Funeral History (NMFH)</p>
+    <p>All Rights Reserved</p>
+    <p>Privacy Policy</p>
+    <p>Shipping Policy</p>
+    <a href="https://www.facebook.com/funeralmuseum/" target="_black"><img
+            src="https://www.nmfh.org/assets/img/elements/footer_fbook.svg" class="social-img" alt="Facebook"
+            title="Facebook" aria-label="visit National Funeral History Museum FaceBook"></a>
+    <a href="https://twitter.com/funeralmuseum/" target="_black"><img
+            src="https://www.nmfh.org/assets/img/elements/footer_twitter.svg" class="social-img" alt="Twitter"
+            title="Twitter" aria-label="visit National Funeral History Museum Twitter"></a>
+    <a href="https://www.flickr.com/photos/135226701@N05/" target="_black"><img
+            src="https://www.nmfh.org/assets/img/elements/footer_flickr.svg" class="social-img" alt="Flickr"
+            title="Flickr" aria-label="visit National Funeral History Museum Flickr"></a>
+    <a href="https://www.tripadvisor.com/Attraction_Review-g56003-d106117-Reviews-National_Museum_of_Funeral_History-Houston_Texas.html"
+        target="_black"><img src="https://www.nmfh.org/assets/img/elements/footer_tripadv.svg" class="social-img"
+            alt="Trip Advisor" title="Trip Advisor" aria-label="visit National Funeral History Museum Trip Advisor"></a>
+    <section>
+        <p style=" font-size: medium;">
+
+            This website is a markup of the original <a href="https://www.nmfh.org/" target="_blank">National Museum
+                of Funeral History</a>. The work is
+            only for the assignment02,
+            DH150: Web-coding for UX by Labiba Alam. Here is the accessibility/seo audit result with the
+            original scores shown right below and the new scores below the orginal scores: <br>
+            <hr>
+            <img src="./img/Scores3.jpg" alt="original accessibility and seo scores"> <br> <br>
+            <hr>
+            <img src="./img/Scores2.jpg" alt="new markup accessibility and seo scores"> <br> <br>
+            <hr>
+
         <section id="back">
             <button id="backtotop" class id="nav" onclick=" location.href='#top'">
                 Back to Top
@@ -350,53 +383,33 @@
         </section>
         <section id="doc">
             <h2>Web Documentation</h2>
-            I chose to improve assignment04 by adding a text increasing icon and a text decreasing icon as well as a toggleable dark mode button. After following the demo and
-            adding aria labels. I noticed that the Accessibility score went down because of the low contrast between the white background and the font color, So I changed the 
-            font color to a darker shade using <a href="https://wave.webaim.org/report#/https://lisa58.github.io/DH150/Week5/assignment05.html">wave.webaim.org</a> to help
-            me pick a color. I also made the navigation bar visible this time. This all improved the Accessibility Score and brought it back to 100, but SEO went down to 91 from 100 because 
-            of a robot.txt error. I didn't entirely understand this error, but after I made sure all the links had "https://," this error was fixed, bringing the SEO score to 100 again. I did more testing with ARC Toolkit and found
-            no major errors. Afterwards, I used the Chrome screen reader extension and tabbed through my website and didn't find any major errors there either since the aria-labels were called out properly.
-               
-             
-            
+            I chose to improve assignment04 by adding a text increasing icon and a text decreasing icon as well as a
+            toggleable dark mode button. After following the demo and
+            adding aria labels. I noticed that the Accessibility score went down because of the low contrast between the
+            white background and the font color, So I changed the
+            font color to a darker shade using <a
+                href="https://wave.webaim.org/report#/https://lisa58.github.io/DH150/Week5/assignment05.html">wave.webaim.org</a>
+            to help
+            me pick a color. I also made the navigation bar visible this time. This all improved the Accessibility Score
+            and brought it back to 100, but SEO went down to 91 from 100 because
+            of a robot.txt error. I didn't entirely understand this error, but after I made sure all the links had
+            "https://," this error was fixed, bringing the SEO score to 100 again. I did more testing with ARC Toolkit
+            and found
+            no major errors. Afterwards, I used the Chrome screen reader extension and tabbed through my website and
+            didn't find any major errors there either since the aria-labels were called out properly.
+
+
+
             <br>
             </p>
         </section>
-        <script>
-            var myBigFontBTN = document.querySelectfor("#BgFontButton");
-            myBigFontBTN.addEventListener("click", MakeFontBigger);
-            function MakeFontBigger() {
-                // change font-size;
-                myBody.style.fontSize = "2em";
-            }
-            var myBody = document.querySelector("body");
-
-            var mySmallFontBTN = document.querySelector("#SlFontButton");
-            mySmallFontBTN.addEventListener("click", MakeFontSmaller);
-            function MakeFontSmaller() {
-                // change font-size;
-                myBody.style.fontSize = "1em";
-            }
-
-            var myDarkMBTN = document.querySelector("#DarkMButton");
-            myDarkMBTN.addEventListener("click", MakeItDark);
-            function MakeItDark() {
-                myBody.classList.toggle("dark-mode");
-                myHeader.classList.toggle("dark-mode");
-
-                const allLinks = document.links;
-                for (let link of allLinks) {
-                    link.classList.toggle("dark-mode-link");
-                }
-            }
-            var myHeader = document.querySelector("header");
+</footer>
 
 
 
-        </script>
 
-    </footer>
-</body>
+
+
 
 
 
