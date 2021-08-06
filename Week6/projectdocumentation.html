@@ -60,7 +60,7 @@
     button:focus {
         background-color: black;
         color: white;
-        filter: grayscale();
+        filter: grayscale(50%);
         font-size: 0.85em;
         line-height: 2em;
         border-radius: 10px;
@@ -100,7 +100,6 @@
 
     a:focus {
         text-decoration: underline;
-        font-style: bold;
     }
 
     a:visited {
@@ -270,7 +269,7 @@
     @media(max-width: 600px) {
 
         img {
-            display: hide;
+            display: none;
         }
 
 
@@ -299,7 +298,7 @@
             font-size: 0.95em;
             line-height: 3em;
             height: 6em;
-            margin: 0pt rgb(108, 39, 39);
+            margin: 0pt;
         }
     }
 </style>
